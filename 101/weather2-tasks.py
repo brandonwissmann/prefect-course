@@ -46,13 +46,13 @@ def save_weather(temp: float):
     return "Successfully wrote temp"
 
 @flow
-def pipeline(lat: float, lon: float):
+def pipeline(lat: float = 12.1, lon: float = 32.0):
     temp = fetch_weather(lat, lon)
     result = save_weather(temp)
     return result
 
 @flow
-def pipeline_two(lat: float, lon: float):
+def pipeline_two(lat: float = 12.1, lon: float = 32.0):
     temp = fetch_weather(lat, lon)
     result = save_weather(temp)
     return result
