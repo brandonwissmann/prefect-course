@@ -49,6 +49,7 @@ def save_weather(temp: float):
 def pipeline(lat: float = 12.1, lon: float = 32.0):
     temp = fetch_weather(lat, lon)
     result = save_weather(temp)
+    pipeline_two(lat + 1, lon + 2)
     return result
 
 @flow
