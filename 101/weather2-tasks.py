@@ -1,8 +1,9 @@
 import httpx  # requests capability, but can work with async
-from prefect import flow, task, get_run_logger, serve, run_deployment
+from prefect import flow, task, get_run_logger, serve
 from prefect.artifacts import create_link_artifact, create_table_artifact
 from prefect.tasks import task_input_hash
 from prefect.events import emit_event
+from prefect.deployments import run_deployment
 
 
 @task(cache_key_fn=task_input_hash)
